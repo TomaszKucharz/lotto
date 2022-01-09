@@ -1,24 +1,32 @@
-const btn = document.querySelector(`.checkNumber`);
+// const btn = document.querySelector(`.checkNumber`);
 const div = document.querySelector(`div`);
 
+let code = [];
 
 const lottery = () =>
 {
-   let code = [];
-   for (let i = 0; i < 6; i++)
+
+   if (code.length === 0)
    {
-      const index = Math.floor(Math.random() * (49 - 1 + 1) + 1);
-      code.push(index);
-
+      for (let i = 0; i < 6; i++)
+      {
+         const index = Math.floor(Math.random() * (49 - 1 + 1) + 1);
+         code.push(index);
+      }
+      div.textContent = `your numbers : ${ code }`;
+   } else
+   {
+      alert(`Push - "clear number"`);
    }
-   div.textContent = `your numbers are : ${ code }`;
-
 }
 
 const cleanList = () =>
 {
-   div.textContent = ``;
+   code = [];
+   div.textContent = `your numbers : ${ code }`;
 }
 
 /*dodaje pusty tekst */
-btn.addEventListener(`click`, lottery);
+document.querySelector(`.checkNumber`).addEventListener(`click`, lottery);
+
+document.querySelector(`.cleanList`).addEventListener(`click`, cleanList);
