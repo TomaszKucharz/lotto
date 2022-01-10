@@ -7,7 +7,7 @@
 body {
   max-width: 80vw;
   margin: 10px auto;
-  height: 100vh;
+  height: 90vh;
 }
 
 h1 {
@@ -20,22 +20,50 @@ h1 {
   text-align: center;
 }
 
-body .checkNumber {
+.checkNumber {
   display: block;
   margin-left: 70%;
   font-size: 20px;
   padding: 10px;
+  background-color: white;
+  border: 1px solid red;
+  color: red;
 }
-body .cleanList {
+.cleanList {
   display: block;
   margin-top: 3vh;
   margin-left: 70%;
   font-size: 20px;
   padding: 10px;
+  background-color: white;
+  border: 1px solid red;
+  color: red;
 }
-body div {
-  margin-top: 15vh;
+.checkNumber:hover {
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+}
+.cleanList:hover {
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+}
+.numbers {
+  margin: 5vh 0 0 10vw;
   text-align: start;
-  font-size: 20px;
+  font-size: 30px;
+  /* color: red; */
   font-family: Arial, Helvetica, sans-serif;
+}
+.largeSquare {
+  margin: 10vh auto;
+  max-width: 277px;
+  max-height: 277px;
+  border: 2px solid black;
+}
+.largeSquare div {
+  display: inline-block;
+  font-size: 25px;
+  margin: 0px 6px;
 }
