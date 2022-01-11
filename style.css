@@ -22,8 +22,7 @@ h1 {
 
 .checkNumber {
   display: block;
-  margin-top: 10vh;
-  margin-left: 45%;
+  margin: 10vh auto;
   font-size: 20px;
   padding: 10px;
   background-color: white;
@@ -32,8 +31,7 @@ h1 {
 }
 .cleanList {
   display: block;
-  margin-top: 5vh;
-  margin-left: 45%;
+  margin: 5vh auto;
   font-size: 20px;
   padding: 10px;
   background-color: white;

@@ -1,4 +1,3 @@
-// const btn = document.querySelector(`.checkNumber`);
 const divNumbers = document.querySelector(`.numbers`);
 const divSquare = document.querySelector(`.largeSquare`);
 
@@ -17,7 +16,7 @@ const counter = () =>
 
 let code = [];
 
-const lottery = () =>
+const lottery = (e) =>
 {
 
    if (code.length === 0)
