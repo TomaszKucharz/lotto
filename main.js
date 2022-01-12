@@ -1,8 +1,8 @@
 const divNumbers = document.querySelector(`.numbers`);
 const divSquare = document.querySelector(`.largeSquare`);
-
+// wstawiam tablicę arraySquare , którą wykorzytuję do zbudowania graficznego kwadratu z liczbami do skreslenia w LOTTO
 let arraySquare = [];
-
+// funkcja COUNTER wypełnia tablicę liczbami do 49 
 const counter = () =>
 {
    for (let i = 1; i <= 49; i++)
@@ -13,9 +13,9 @@ const counter = () =>
    }
 
 }
-
+// deklaracja tablicy CODE , tablica do obsługi losowanych liczb (6 z 49)
 let code = [];
-
+// główna funkcja, uruchamia losowanie , wprowadza warunki nie powtarzania się losowanych liczb. Wylosowane liczby push'uje do tablicy CODE. Na końcu wyświetla ją w  DIVNUMBERS. 
 const lottery = () =>
 {
 
@@ -27,14 +27,11 @@ const lottery = () =>
 
          if (code.includes(index))
          {
-            console.log("not ok");
             --i;
          } else
          {
-            console.log("ok");
             code.push(index);
          }
-         console.log(code);
       }
       divNumbers.textContent = `your lucky numbers : ${ code }`;
    } else
@@ -42,13 +39,14 @@ const lottery = () =>
       alert(`Push - "clear number"`);
    }
 }
-
-const cleanList = (e) =>
+// funkcja czyszcząca zawartość tablicy CODE i textContent z DIVNUMBERS
+const cleanList = () =>
 {
    code = [];
    divNumbers.textContent = `your lucky numbers : ${ code }`;
 }
-
+//wywołanie funkcji counter
 counter();
+// nasłuchiwanie na kliknięcie BUTTON'ów
 document.querySelector(`.checkNumber`).addEventListener(`click`, lottery);
 document.querySelector(`.cleanList`).addEventListener(`click`, cleanList);
