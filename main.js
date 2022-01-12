@@ -27,14 +27,11 @@ const lottery = () =>
 
          if (code.includes(index))
          {
-            console.log("not ok");
             --i;
          } else
          {
-            console.log("ok");
             code.push(index);
          }
-         console.log(code);
       }
       divNumbers.textContent = `your lucky numbers : ${ code }`;
    } else
