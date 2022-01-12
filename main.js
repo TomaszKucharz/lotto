@@ -1,7 +1,7 @@
 const divNumbers = document.querySelector(`.numbers`);
 const divSquare = document.querySelector(`.largeSquare`);
 
-const arraySquare = [];
+let arraySquare = [];
 
 const counter = () =>
 {
@@ -16,7 +16,7 @@ const counter = () =>
 
 let code = [];
 
-const lottery = (e) =>
+const lottery = () =>
 {
 
    if (code.length === 0)
@@ -24,24 +24,31 @@ const lottery = (e) =>
       for (let i = 0; i < 6; i++)
       {
          const index = Math.floor(Math.random() * (49 - 1 + 1) + 1);
-         code.push(index);
+
+         if (code.includes(index))
+         {
+            console.log("not ok");
+            --i;
+         } else
+         {
+            console.log("ok");
+            code.push(index);
+         }
+         console.log(code);
       }
       divNumbers.textContent = `your lucky numbers : ${ code }`;
    } else
    {
       alert(`Push - "clear number"`);
    }
-   // counter();
 }
 
-const cleanList = () =>
+const cleanList = (e) =>
 {
    code = [];
    divNumbers.textContent = `your lucky numbers : ${ code }`;
 }
 
 counter();
-/*dodaje pusty tekst */
 document.querySelector(`.checkNumber`).addEventListener(`click`, lottery);
-
 document.querySelector(`.cleanList`).addEventListener(`click`, cleanList);
