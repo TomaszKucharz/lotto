@@ -58,11 +58,19 @@ h1 {
 .largeSquare {
   margin: 10vh auto;
   max-width: 277px;
-  max-height: 277px;
+  min-height: 277px;
   border: 2px solid black;
 }
 .largeSquare div {
   display: inline-block;
   font-size: 25px;
   margin: 0px 6px;
+}
+.active {
+  color: rgb(255, 6, 6);
+  background-color: yellow;
+}
+.off {
+  color: black;
+  background-color: transparent;
 }

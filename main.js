@@ -38,12 +38,30 @@ const lottery = () =>
    {
       alert(`Push - "clear number"`);
    }
+   colorCounter();
 }
-// funkcja czyszcząca zawartość tablicy CODE i textContent z DIVNUMBERS
+//funkcja kolorująca wylosowane liczby
+const colorCounter = () =>
+{
+   for (let i = 0; i < code.length; i++)
+   {
+      if (arraySquare.includes(code[i]))
+      {
+         const newDiv = document.querySelector(`.largeSquare div:nth-child(${ code[i] })`);
+         newDiv.classList.add(`active`);
+      } else
+      {
+         return alert("jeśli widzisz ten tekst, to oznacza że coś się sypie w kodzie programu!!");
+      }
+   }
+}
+// funkcja czyszcząca zawartość tablicy CODE i textContent z DIVNUMBERS oraz czyści wynik losowania w DIVSQUARE i uruchamia ponownie funkcję COUNTER
 const cleanList = () =>
 {
    code = [];
    divNumbers.textContent = `your lucky numbers : ${ code }`;
+   divSquare.innerHTML = "";
+   counter();
 }
 //wywołanie funkcji counter
 counter();
