@@ -70,9 +70,4 @@ h1 {
   color: rgb(255, 6, 6);
   background-color: rgb(255, 255, 0);
   box-shadow: 0 0 1px 5px rgb(255, 255, 0);
-  /* transition: 0.5s; */
-}
-.off {
-  color: black;
-  background-color: transparent;
 }
