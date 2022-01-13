@@ -11,14 +11,12 @@ const counter = () =>
       const newDiv = document.createElement(`div`);
       divSquare.appendChild(newDiv).textContent = [i];
    }
-
 }
 // deklaracja tablicy CODE , tablica do obsługi losowanych liczb (6 z 49)
 let code = [];
 // główna funkcja, uruchamia losowanie , wprowadza warunki nie powtarzania się losowanych liczb. Wylosowane liczby push'uje do tablicy CODE. Na końcu wyświetla ją w  DIVNUMBERS. 
 const lottery = () =>
 {
-
    if (code.length === 0)
    {
       for (let i = 0; i < 6; i++)
@@ -49,7 +47,6 @@ const colorCounter = () =>
       {
          const newDiv = document.querySelector(`.largeSquare div:nth-child(${ code[i] })`);
          newDiv.classList.add(`active`);
-
       } else
       {
          return alert("jeśli widzisz ten tekst, to oznacza że coś się sypie w kodzie programu!!");
