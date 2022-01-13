@@ -49,6 +49,7 @@ const colorCounter = () =>
       {
          const newDiv = document.querySelector(`.largeSquare div:nth-child(${ code[i] })`);
          newDiv.classList.add(`active`);
+
       } else
       {
          return alert("jeśli widzisz ten tekst, to oznacza że coś się sypie w kodzie programu!!");
